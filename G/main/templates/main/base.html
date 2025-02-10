@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Template</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 20px 40px;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-left a, .nav-right a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav-left a:hover, .nav-right a:hover {
+            color: #ffcc00;
+        }
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px;
+        }
+        .footer {
+            position: absolute;
+            top: 88%;
+            text-align: center;
+            background: #222;
+            color: white;
+            padding-left: 40rem;
+            padding-right: 40rem;
+            font-size: 14px;
+        }
+        .btn {
+            background: #ffcc00;
+            color: #222;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-left">
+            <a href="{% url 'homepage' %}">Home</a>
+            <a href="{% url 'aboutpage' %}">About</a>
+            <a href="{% url 'contactus' %}">Contact Us</a>
+        </nav>
+        <nav class="nav-right">
+            <a href="{% url 'loginpage' %}" class="btn">Login</a>
+            <a href="{% url 'signupage' %}" class="btn">Signup</a>
+        </nav>
+    </header>
+    
+    
+
+    <footer class="footer">
+        <p>&copy; 2025 <br> All rights Rsvd</p>
+    </footer>
+</body>
+</html>
