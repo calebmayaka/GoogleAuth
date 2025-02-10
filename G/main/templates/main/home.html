@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Navigation Styles */
+    .nav-bar {
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .nav-bar a, .nav-bar button {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    .nav-bar a:hover, .nav-bar button:hover {
+      color: #ff6f61;
+    }
+
+    .logout-btn {
+      background: #ff6f61;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .main-content h1 {
+      font-size: 48px;
+      color: #ff6f61;
+      margin-bottom: 20px;
+    }
+
+    .main-content p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      color: #ddd;
+    }
+
+    /* Grid Layout for Testimonials & Projects */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      justify-items: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      color: #ff6f61;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #ddd;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .footer a {
+      color: #ff6f61;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="nav-bar">
+    <div class="logo">My Portfolio</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="logout-btn">Logout</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Discover my work, skills, and testimonials from satisfied clients. Scroll down to explore more!</p>
+
+    <!-- Testimonials Section -->
+    <div class="grid-container">
+      <div class="card">
+        <h3>John Doe</h3>
+        <p>"Amazing work! Highly recommend this professional for any project."</p>
+      </div>
+      <div class="card">
+        <h3>Jane Smith</h3>
+        <p>"Creative and efficient. Delivered beyond my expectations!"</p>
+      </div>
+      <div class="card">
+        <h3>Mike Johnson</h3>
+        <p>"Great communication and top-notch quality. Will work with them again!"</p>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="grid-container">
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>A stunning web design project for a client in the tech industry.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>An e-commerce platform with a modern and user-friendly interface.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Project 3">
+        <h3>Project 3</h3>
+        <p>A mobile app designed to improve productivity and time management.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2023 My Portfolio. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+  </div>
+</body>
+</html>
