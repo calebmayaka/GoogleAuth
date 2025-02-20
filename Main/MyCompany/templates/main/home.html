@@ -1,17 +1,16 @@
-{% load static %} 
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <link rel="stylesheet" href="style.css">
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Portfolio</div>
+            <div class="logo">CALEB</div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -37,9 +36,26 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Full-Stack Developer & Creative Thinker</p>
+            <h1>Re-defining the Future With Technology</h1>
+            <h1 class="gradient-title">CTX Technologies LTD</h1>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+                .gradient-title {
+                    background: linear-gradient(45deg, #000000, #1d201f, #000000, #1d1d1f, #353538, #202020, #0d0d0e, #000000, #161816, #020202, #000000, #ff922b);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 3rem;
+                    font-family: 'Pacifico', cursive;
+                    transition: transform 0.3s ease;
+                }
+                .gradient-title:hover {
+                    transform: scale(1.1);
+                }
+            </style>
+            <p>Full-Stack Development , Video Editing, Graphics Design, Computers and Printers Mantainance </p>
             <a href="#contact" class="cta-btn">Get in Touch</a>
+
+            <a href="#contact" class="cta-btn">Get Quote</a>
         </div>
     </section>
 
@@ -47,7 +63,7 @@
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>I'm a passionate developer with experience in creating beautiful and functional web applications.</p>
+                <p style="text-align: center;">I'm a passionate developer with experience in creating beautiful and functional web applications.</p>
             </div>
         </div>
     </section>
