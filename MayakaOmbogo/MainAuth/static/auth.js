@@ -4,7 +4,7 @@ function handleGoogleLogin(response) {
     // Handle the Google sign-in response
     console.log('Google login successful');
     // Add your login logic here
-    window.location.href = 'MainAuth/home.html';
+    window.location.href = 'C:\Dev\GoogleAuth\MayakaOmbogo\MainAuth\templates\MainAuth\home.html';
 }
 
 function handleGoogleSignup(response) {
@@ -12,7 +12,7 @@ function handleGoogleSignup(response) {
     // Handle the Google sign-up response
     console.log('Google signup successful');
     // Add your signup logic here
-    window.location.href = 'MainAuth/home.html';
+    window.location.href = 'C:\Dev\GoogleAuth\MayakaOmbogo\MainAuth\templates\MainAuth\home.html';
 }
 
 // Regular authentication handling
@@ -22,7 +22,7 @@ if (loginForm) {
         e.preventDefault();
         // Add your login logic here
         console.log('Login form submitted');
-        window.location.href = 'MainAuth/home.html';
+        window.location.href = 'C:\Dev\GoogleAuth\MayakaOmbogo\MainAuth\templates\MainAuth\home.html';
     });
 }
 
@@ -32,6 +32,6 @@ if (signupForm) {
         e.preventDefault();
         // Add your signup logic here
         console.log('Signup form submitted');
-        window.location.href = 'index.html';
+        window.location.href = 'C:\Dev\GoogleAuth\MayakaOmbogo\MainAuth\templates\MainAuth\home.html';
     });
 }
