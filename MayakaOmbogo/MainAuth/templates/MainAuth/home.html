@@ -20,7 +20,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="{% static 'login.html' %}" class="auth-btn">Login</a></li>
+                <li><a href="{% url 'login' %}" class="auth-btn">Login</a></li>
                 <li>
                     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
                         <svg class="sun-icon" viewBox="0 0 24 24" width="24" height="24">
@@ -214,6 +214,6 @@
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="{% static 'main.js' %}"></script>
 </body>
 </html>
