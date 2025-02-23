@@ -126,6 +126,8 @@ STATICFILES_DIRS = [
     BASE_DIR / 'MainAuth' / 'static',
 ]
 
+AUTH_USER_MODEL = 'MainAuth.CustomUser'
+
 
 
 # Default primary key field type

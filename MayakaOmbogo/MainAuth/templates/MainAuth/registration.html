@@ -12,14 +12,49 @@
     <div class="auth-container">
         <div class="auth-box">
             <h2>Sign Up</h2>
-            <form id="signup-form">
-                <input type="text" placeholder="Username" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
-                <button type="submit">Sign Up</button>
+            <form id="signup-form" method="post" enctype="multipart/form-data">
+              {% csrf_token %}  <!-- Add CSRF token for security -->
+          
+              <!-- Username Field -->
+              <div class="form-group">
+                <input type="text" name="username" placeholder="Username" required>
+                {% if form.username.errors %}
+                  <div class="error">{{ form.username.errors }}</div>
+                {% endif %}
+              </div>
+          
+              <!-- Email Field -->
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Email" required>
+                {% if form.email.errors %}
+                  <div class="error">{{ form.email.errors }}</div>
+                {% endif %}
+              </div>
+          
+              <!-- Password Field -->
+              <div class="form-group">
+                <input type="password" name="password1" placeholder="Password" required>
+                {% if form.password1.errors %}
+                  <div class="error">{{ form.password1.errors }}</div>
+                {% endif %}
+              </div>
+          
+              <!-- Confirm Password Field -->
+              <div class="form-group">
+                <input type="password" name="password2" placeholder="Confirm Password" required>
+                {% if form.password2.errors %}
+                  <div class="error">{{ form.password2.errors }}</div>
+                {% endif %}
+              </div>
+          
+              <!-- Submit Button -->
+              <button type="submit">Sign Up</button>
             </form>
+          
             <div class="google-signin-container">
+              <!-- Google Sign-In Button (if applicable) -->
+            </div>
+          </div>
                 <div id="g_id_signin"
                      class="g_id_signin"
                      data-type="standard"
